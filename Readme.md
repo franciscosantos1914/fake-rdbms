@@ -1,39 +1,38 @@
 ## Fake RDBMS
 
-### Sobre
+### About
 
-Esta aplicação Node.js permite a manipulação de consultas SQL de forma dinâmica, convertendo-as em operações em uma base de dados em memória. A aplicação suporta operações de `INSERT` e `SELECT`, e interage com o usuário através de uma interface de linha de comando (CLI) usando a biblioteca `prompt-sync`.
+This Node.js application allows the manipulation of SQL queries dynamically, converting them into operations on an in-memory database. The application supports `INSERT` and `SELECT` operations and interacts with the user through a Command Line Interface (CLI) using the `prompt-sync` library.
 
-### Características Principais
+### Key Features
 
-- **Manipulação de Consultas SQL**: A aplicação aceita consultas SQL do tipo `INSERT` e `SELECT`, convertendo-as em operações na base de dados em memória.
-- **Base de Dados em Memória**: Utiliza um objeto JavaScript como base de dados em memória, permitindo operações rápidas e eficientes.
-- **Interface de Linha de Comando (CLI)**: Interage com o usuário através de uma CLI, utilizando a biblioteca `prompt-sync` para receber e apresentar informações.
+- **SQL Query Manipulation**: The application accepts `INSERT` and `SELECT` SQL queries, converting them into operations on the in-memory database.
+- **In-Memory Database**: It uses a JavaScript object as an in-memory database, enabling fast and efficient operations.
+- **Command Line Interface (CLI)**: Interacts with the user through a CLI, utilizing the `prompt-sync` library to receive and present information.
 
-### Como Usar
+### How to Use
 
-1. **Instalação**:
-   - Clone o repositório.
-   - Execute `npm install` para instalar as dependências.
+1. **Installation**:
+   - Clone the repository.
+   - Run `npm install` to install the dependencies.
 
-2. **Execução**:
-   - Inicie a aplicação com `npm run start`.
-   - A CLI solicitará que você insira uma consulta SQL.
+2. **Execution**:
+   - Start the application with `npm run start`.
+   - The CLI will prompt you to enter a SQL query.
 
-3. **Operações Suportadas**:
-   - **INSERT**: Para inserir dados na base de dados em memória, insira uma consulta SQL do tipo `INSERT`. 
-  <br /> Por exemplo: `INSERT INTO users (name, age) VALUES ('John Doe', 30)`.
-   - **SELECT**: Para recuperar dados da base de dados em memória, insira uma consulta SQL do tipo `SELECT`. 
-  <br /> Por exemplo: `SELECT * FROM users WHERE age > 25`.
+3. **Supported Operations**:
+   - **INSERT**: To insert data into the in-memory database, input an `INSERT` SQL query. 
+  <br /> For example: `INSERT INTO users (name, age) VALUES ('John Doe', 30)`.
+   - **SELECT**: To retrieve data from the in-memory database, input a `SELECT` SQL query. 
+  <br /> For example: `SELECT * FROM users WHERE age > 25`.
 
-### Exemplos de Uso
+### Usage Examples
 
-- **Inserir Dados**:
+- **Insert Data**:
 `INSERT INTO users (name, age) VALUES ('Jane Doe', 28)`
-- **Recuperar Dados**:
+- **Retrieve Data**:
 `SELECT * FROM users WHERE age > 25`
 
+### Security Considerations
 
-### Considerações de Segurança
-
-- A aplicação não realiza validações de entrada ou escapes de strings, portanto, é importante garantir que as consultas SQL inseridas sejam seguras para evitar ataques de injeção SQL.
+- The application does not perform input validation or string escaping, so it's important to ensure that the entered SQL queries are secure to prevent SQL injection attacks.
