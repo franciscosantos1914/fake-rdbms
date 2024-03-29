@@ -1,8 +1,8 @@
 {
-  "name": "db",
+  "name": "fake-rdbms",
   "version": "1.0.0",
-  "description": "An in memory database",
-  "main": "index.js",
+  "description": "An Fake Relational Database Management System",
+  "main": "index.mjs",
   "scripts": {
     "start": "node --watch --env-file .env index.mjs",
     "test": "globstar -- node --test \"**/*.test.mjs\""
@@ -17,5 +17,8 @@
   "license": "ISC",
   "devDependencies": {
     "globstar": "^1.0.0"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
   }
 }
