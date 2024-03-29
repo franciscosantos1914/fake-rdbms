@@ -1,7 +1,7 @@
 version: "3"
 services:
-  db:
-    container_name: mysql-clone-db
+  fake-rdbms:
+    container_name: fake-rdbms
     init: true
     build:
       context: .
@@ -9,10 +9,10 @@ services:
     ports: 
       - 3066:3066
     volumes: 
-      - mysql-clone-db:/app/data
+      - fake_rdbms_volume:/app/data
     command: [ "npm", "t" ]
 volumes:
-  mysql-clone-db:
+  fake_rdbms_volume:
     driver: local
     driver_opts:
       type: none
